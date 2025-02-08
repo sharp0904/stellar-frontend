@@ -42,10 +42,6 @@ const AppliedJobsList = () => {
     // Automatically redirect to the appropriate dashboard
     if (roles.includes("client")) {
       router.push("/dashboard/client/jobList");
-    } else if (roles.includes("developer")) {
-      router.push("/dashboard/developer/appliedJob");
-    } else {
-      setRedirecting(false);
     }
   }, [user, roles, router]);
 
