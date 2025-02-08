@@ -39,10 +39,6 @@ const AppliedJobsList = () => {
       router.push("/login"); // Redirect to login if not authenticated
       return;
     }
-    // Automatically redirect to the appropriate dashboard
-    if (roles.includes("client")) {
-      router.push("/dashboard/client/jobList");
-    }
   }, [user, roles, router]);
 
   const [appliedJobs, setAppliedJobs] = useState<Job[]>([]);
