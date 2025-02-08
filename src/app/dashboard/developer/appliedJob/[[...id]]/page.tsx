@@ -32,7 +32,6 @@ const AppliedJobsList = () => {
 
   const { user, roles, token } = useAuth();
   const router = useRouter();
-  const [, setRedirecting] = useState(true);
   
   useEffect(() => {
     if (!user) {
