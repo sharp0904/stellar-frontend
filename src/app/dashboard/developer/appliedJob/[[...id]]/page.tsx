@@ -32,16 +32,11 @@ const AppliedJobsList = () => {
 
   const { user, roles, token } = useAuth();
   const router = useRouter();
-  const [, setRedirecting] = useState(true);
   
   useEffect(() => {
     if (!user) {
       router.push("/login"); // Redirect to login if not authenticated
       return;
-    }
-    // Automatically redirect to the appropriate dashboard
-    if (roles.includes("client")) {
-      router.push("/dashboard/client/jobList");
     }
   }, [user, roles, router]);
 
