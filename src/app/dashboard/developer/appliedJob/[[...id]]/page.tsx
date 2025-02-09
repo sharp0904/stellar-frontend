@@ -194,8 +194,15 @@ const AppliedJobsList = () => {
   return (
     <div>
       <Header />
-      <div className="flex justify-center dark:bg-gray-900 dark:text-gray-100">
-        <div className="p-6 text-gray-600 dark:text-gray-300 w-full max-w-5xl">
+      <div className="relative flex justify-center dark:bg-gray-900 dark:text-gray-100">
+
+        {/* blur background start */}
+        <div className="absolute inset-0 bg-[url('/dashboard.png')] bg-cover bg-center blur-xl"></div>
+        {/* Overlay for better readability */}
+        <div className="absolute inset-0 bg-white/20 backdrop-blur-xl"></div>
+        {/* blur background end */}
+
+        <div className="p-6 text-gray-600 dark:text-gray-300 w-full max-w-5xl z-10">
           <h2 className="text-xl font-semibold mt-6">Applied Jobs</h2>
           {appliedJobs.length > 0 ? (
             <div className="grid gap-4 mt-4">
