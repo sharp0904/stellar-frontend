@@ -159,7 +159,7 @@ const JobListings = () => {
   return (
     <>
       <Header />
-      <div className="relative flex justify-center min-h-screen">
+      <div className="relative flex justify-center">
 
         {/* blur background start */}
         <div className="absolute inset-0 bg-[url('/dashboard.png')] bg-cover bg-center blur-xl"></div>
